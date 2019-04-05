@@ -143,7 +143,7 @@ However we choose to run ```create-react-app```, it will create a folder structu
 ┊ ┊ ├─ index.css
 ┊ ┊ ├─ index.js
 ┊ ┊ ├─ serviceWorker.js
-├─ package.json
+┊ ├─ package.json
 
 # some files and folders removed for brevity
 ```
