@@ -1,3 +1,6 @@
+[Home](https://github.com/wgoode3/react-notes/blob/master/README.md)
+[Prev](https://github.com/wgoode3/react-notes/blob/master/createElement.md)
+
 The previous process works, but is rather tedious. If instead we have added the following script to our ```index.html``` we can use the JSX instead of createElement.
 
 ```html
@@ -42,3 +45,5 @@ python3 -m http.server 8000
 ```
 
 Simply change directory into the folder that contains your project, and ```http.server``` will serve the ```index.html``` file at localhost:8000.
+
+[Next](https://github.com/wgoode3/react-notes/blob/master/create-react-app.md)
