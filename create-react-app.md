@@ -1,3 +1,6 @@
+[Home](https://github.com/wgoode3/react-notes/blob/master/README.md)
+[Prev](https://github.com/wgoode3/react-notes/blob/master/babel&jsx.md)
+
 ## create-react-app
 
 Now that we have gotten our feet wet using React and using JSX, we could really use a nice tool to set up our projects for us. We've also probably seen a warning in our console when we use the ```babel``` script link letting us know this will not be a suitable solution in a production environment. 
@@ -52,3 +55,5 @@ npm start
 ```
 
 This will run ```my-app``` in a test server on port 3000. When we modify the ```App.js``` file, we will see the changes reflected at ```localhost:3000``` automatically.
+
+\[Next\]
