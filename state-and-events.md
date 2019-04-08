@@ -72,4 +72,4 @@ In the above example, we also need to add in one more thing. Currently the ```le
 
 Now when a user clicks on the ```leave``` button it will run the ```logout``` method and change the text that is displayed.
 
-\[Next\]
+[Next](https://github.com/wgoode3/react-notes/blob/master/child-components-and-props.md)
