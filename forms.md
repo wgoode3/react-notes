@@ -68,8 +68,18 @@ When the user types the name of a product into the "Name" input, whenever that i
 let p = {...this.state.product};
 ```
 
-We make use of the JavaScript [spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator to clone the information strored in state, rather than make a new pointer to the location of the information in state. 
+We make use of the JavaScript [spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator to clone the information strored in state, rather than make a new pointer to the location of the information in state. Next we change the name attribute in the ```p``` variable to set it equal to the data from our form.
 
+```javascript
+p.name = e.target.value;
+```
 
+The variable ```e``` is a synthetic event variable, the ```.target``` attribute is the ```<input />``` element itself and the ```.value``` is the value currently entered into the input. Lastly we run ```setState()``` to alter the ```product``` we're keeping track of in ```this.state``` to reflect what we changed on our variable ```p```.
+
+```javascript
+this.setState({product: p});
+```
+
+We do essentially the same process for ```price``` and any other inputs that we would have. When the user goes to submit the form, the ```newProduct``` method is called. The first thing we need to do is prevent the form from actually submitting anywhere (we want to handle this ourselves), so we call ```.preventDefault()``` on the synthetic event ```e```. After this we could do whatever we want to with out form date, to visualize this easily, let's use ```alert()``` to pop up the information in a prompt. Later we may want to pass this information into an array of products instead or even save it to a database with our REST server.
 
 \[Next\]
