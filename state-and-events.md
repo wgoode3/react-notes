@@ -5,7 +5,7 @@
 
 In react, ```state``` is where we store key information about our app so that we can display it to our users in the ```render()``` method and make appropriate changes to it as the user interacts with our app.
 
-We can create a state attribute inside of the [contructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) of our class. If we have a message to display to our users, we could put something like this into our ```app.js```.
+We can create a state attribute inside of the [contructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) of our class. If we have a message to display to our users, we could put something like this into our ```App.js```.
 
 ```javascript
 class App extends Component {
