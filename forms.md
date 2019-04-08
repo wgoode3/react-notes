@@ -23,13 +23,13 @@ class App extends Component {
     }
 
     changeName = (e) => {
-        let p = {...this.state.prduct};
+        let p = {...this.state.product};
         p.name = e.target.value;
         this.setState({product: p});
     }
 
     changePrice = (e) => {
-        let p = {...this.state.prduct};
+        let p = {...this.state.product};
         p.price = e.target.value;
         this.setState({product: p});
     }
