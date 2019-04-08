@@ -3,7 +3,7 @@
 
 ## Child Components and Props
 
-When we're working with our ```app.js``` we may find ourselves at times writing repetative code. For instance imagine we have a list of products we want to show to our users.
+When we're working with our ```App.js``` we may find ourselves at times writing repetative code. For instance imagine we have a list of products we want to show to our users.
 
 ```javascript
 class App extends Component {
