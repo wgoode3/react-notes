@@ -56,10 +56,12 @@ class Product extends Component {
 class App extends Component {
     render() {
         return (
-            <h1 className="jumbo">React Store!</h1>
-            <Product product={{name: "Coffee Mug", price: "$8.99"}} />
-            <Product product={{name: "Mouse Pad", price: "$15.49"}} />
-            <Product product={{name: "Monitor Stand", price: "$24.99"}} />
+            <div className="container">
+                <h1 className="jumbo">React Store!</h1>
+                <Product product={{name: "Coffee Mug", price: "$8.99"}} />
+                <Product product={{name: "Mouse Pad", price: "$15.49"}} />
+                <Product product={{name: "Monitor Stand", price: "$24.99"}} />
+            </div>
         )
     }
 }
@@ -86,12 +88,14 @@ class App extends Component {
 
     render() {
         return (
-            <h1 className="jumbo">React Store!</h1>
-            {
-                this.state.products.map( (aProduct, index) =>
-                    <Product key={index} product={aProduct} />
-                );
-            }
+            <div className="container">
+                <h1 className="jumbo">React Store!</h1>
+                {
+                    this.state.products.map( (aProduct, index) =>
+                        <Product key={index} product={aProduct} />
+                    );
+                }
+            </div>
         );
     }
 }
