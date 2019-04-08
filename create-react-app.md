@@ -56,4 +56,4 @@ npm start
 
 This will run ```my-app``` in a test server on port 3000. When we modify the ```App.js``` file, we will see the changes reflected at ```localhost:3000``` automatically.
 
-\[Next\]
+[Next](https://github.com/wgoode3/react-notes/blob/master/state-and-events.md)

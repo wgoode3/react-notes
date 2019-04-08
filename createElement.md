@@ -24,7 +24,7 @@ Assuming we have the following in our ```index.html```.
 And the following in our ```app.js```.
 
 One way to create react elements is to use ```React.createElement()```. Using this we can identify:
-1. what type of html element we want (in the below case an ```h1``` tag)
+1. the type of html element we want (in the below case an ```h1``` tag)
 2. the ```props``` to pass to the element (we'll discuss this more later)
 3. the children of the element (in this case just text) 
 
