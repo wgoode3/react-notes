@@ -16,12 +16,12 @@ Assuming we have the following in our ```index.html```.
 </head>
 <body>
     <div id="root"></div>
-    <script type="text/babel" src="app.js"></script>
+    <script src="App.js"></script>
 </body>
 </html>
 ```
 
-And the following in our ```app.js```.
+And the following in our ```App.js```.
 
 One way to create react elements is to use ```React.createElement()```. Using this we can identify:
 1. the type of html element we want (in the below case an ```h1``` tag)
@@ -51,7 +51,7 @@ const myList = React.createElement(
         React.createElement("li", null, "????"),
         React.createElement("li", null, "Profit!!!")
     ]
-)
+);
 ReactDOM.render(myList, document.getElementById("root"));
 ```
 

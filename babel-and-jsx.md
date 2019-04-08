@@ -1,10 +1,12 @@
 [Home](https://github.com/wgoode3/react-notes/blob/master/README.md)
 [Prev](https://github.com/wgoode3/react-notes/blob/master/createElement.md)
 
-The previous process works, but is rather tedious. If instead we have added the following script to our ```index.html``` we can use the JSX instead of createElement.
+The previous process works, but is rather tedious. If instead we have added the following script to our ```index.html``` we can use JSX instead of createElement.
 
 ```html
 <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- And change this script tag as well -->
+<script type="text/babel" src="App.js"></script>
 ```
 
 This script will add ```babel``` which can **transpile** (convert one type of code into another) our JSX code into vanilla JS.
@@ -14,8 +16,8 @@ This script will add ```babel``` which can **transpile** (convert one type of co
 JSX (JavaScript XML) is an extension to JavaScript that allows us to write code that closely resembles HTML without having to make it a string. This is the preferred way to use React. Using JSX we can rewrite the above examples like so...
 
 ```javascript
-const text = "Hello World"
-const greeting = <h1>{text}</h1>
+const text = "Hello World";
+const greeting = <h1>{text}</h1>;
 ReactDOM.render(greeting, document.getElementById("root"));
 ```
 

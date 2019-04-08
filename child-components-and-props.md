@@ -62,7 +62,7 @@ class App extends Component {
                 <Product product={{name: "Mouse Pad", price: "$15.49"}} />
                 <Product product={{name: "Monitor Stand", price: "$24.99"}} />
             </div>
-        )
+        );
     }
 }
 ```

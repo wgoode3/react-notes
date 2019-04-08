@@ -80,6 +80,6 @@ The variable ```e``` is a synthetic event variable, the ```.target``` attribute 
 this.setState({product: p});
 ```
 
-We do essentially the same process for ```price``` and any other inputs that we would have. When the user goes to submit the form, the ```newProduct``` method is called. The first thing we need to do is prevent the form from actually submitting anywhere (we want to handle this ourselves), so we call ```.preventDefault()``` on the synthetic event ```e```. After this we could do whatever we want to with out form date, to visualize this easily, let's use ```alert()``` to pop up the information in a prompt. Later we may want to pass this information into an array of products instead or even save it to a database with our REST server.
+We do essentially the same process for ```price``` and any other inputs that we would have. When the user goes to submit the form, the ```newProduct``` method is called. The first thing we need to do is prevent the form from actually submitting anywhere (we want to handle this ourselves), so we call ```.preventDefault()``` on the synthetic event ```e```. After this we could do whatever we want to with our form date; to visualize this easily, let's use ```alert()``` to pop up the information in a prompt. Later we may want to pass this information into an array of products instead or even save it to a database with our REST server.
 
 \[Next\]

@@ -31,18 +31,18 @@ However we choose to run ```create-react-app```, it will create a folder structu
 
 ```
 ├─ my-app
-┊ ├─ node_modules
-┊ ├─ public
-┊ ┊ ├─ favicon.ico
-┊ ┊ ├─ index.html
-┊ ┊ ├─ manifest.json
-┊ ├─ src
-┊ ┊ ├─ App.css
-┊ ┊ ├─ App.js
-┊ ┊ ├─ index.css
-┊ ┊ ├─ index.js
-┊ ┊ ├─ serviceWorker.js
-┊ ├─ package.json
+  ├─ node_modules
+  ├─ public
+    ├─ favicon.ico
+    ├─ index.html
+    ├─ manifest.json
+  ├─ src
+    ├─ App.css
+    ├─ App.js
+    ├─ index.css
+    ├─ index.js
+    ├─ serviceWorker.js
+  ├─ package.json
 
 # some files and folders removed for brevity
 ```
