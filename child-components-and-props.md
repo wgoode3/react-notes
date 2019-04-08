@@ -35,7 +35,7 @@ class App extends Component {
 }
 ```
 
-This involves writing a lot of the same code over and over again. If we want to add in another product to our store, we'd have to make yet another div and put all of the information in again. One of the most powerful advantages that React and other component based architecture frameworks give us, is that we can essentially make our own html elements (Web Components) to do this for us. We can make them take in the right information and display it in the right places.
+This involves writing a lot of the same code over and over again. If we want to add in another product to our store, we'd have to make yet another div and put all of the information in again. One of the most powerful advantages that React (and other component based architectures) give us, is that we can essentially make blocks of code that act like our own html elements to do this for us. We can make them take in the right information and display it in the right places.
 
 Using child components, we can rewrite the above example like so...
 
