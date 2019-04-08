@@ -1,5 +1,5 @@
 [Home](https://github.com/wgoode3/react-notes/blob/master/README.md)
-[Prev](https://github.com/wgoode3/react-notes/blob/master/babel&jsx.md)
+[Prev](https://github.com/wgoode3/react-notes/blob/master/babel-and-jsx.md)
 
 ## create-react-app
 

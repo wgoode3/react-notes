@@ -101,4 +101,4 @@ class App extends Component {
 }
 ```
 
-\[Next\]
+[Next](https://github.com/wgoode3/react-notes/blob/master/forms.md)

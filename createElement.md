@@ -55,4 +55,4 @@ const myList = React.createElement(
 ReactDOM.render(myList, document.getElementById("root"));
 ```
 
-[Next](https://github.com/wgoode3/react-notes/blob/master/babel&jsx.md)
+[Next](https://github.com/wgoode3/react-notes/blob/master/babel-and-jsx.md)
