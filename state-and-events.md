@@ -47,7 +47,7 @@ class App extends Component {
         };
     }
 
-    logout = () => {
+    logout = (e) => {
         this.setState({message: "Goodbye friend!"});
     }
 
@@ -55,9 +55,21 @@ class App extends Component {
         return (
             <div>
                 <h1>{this.state.message}</h1>
+                <button>Leave</button>
             </div>
         );
     }
 }
 ```
 
+In order to change what we have stored in ```state```, React will make us use the method ```this.setState()```. We could mutate the values stored in ```state``` directly (ie ```this.state.message = "something else";```), however this is bad practice and could get us in trouble later.
+
+In the above example, we also need to add in one more thing. Currently the ```leave``` button isn't associated with the ```logout``` method at all. We need to use the "click" event to associate them. This can be added directly in the ```render()``` method...
+
+```javascript
+<button onClick={this.logout}>Leave</button>
+```
+
+Now when a user clicks on the ```leave``` button it will run the ```logout``` method and change the text that is displayed.
+
+\[Next\]
