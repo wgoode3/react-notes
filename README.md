@@ -7,4 +7,4 @@
 4. [State and Events](https://github.com/wgoode3/react-notes/blob/master/state-and-events.md)
 5. [Child Components and Props](https://github.com/wgoode3/react-notes/blob/master/child-components-and-props.md)
 6. [Forms](https://github.com/wgoode3/react-notes/blob/master/forms.md)
-7. [Lifting State]https://github.com/wgoode3/react-notes/blob/master/lifting-state.md)
+7. [Lifting State](https://github.com/wgoode3/react-notes/blob/master/lifting-state.md)
