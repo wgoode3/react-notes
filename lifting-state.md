@@ -20,11 +20,11 @@ class App extends Component {
         }
     }
 
-    onChange = (e) => {
+    changeItem = (e) => {
         this.setState({item: e.target.value});
     }
 
-    onSubmit = (e) => {
+    addItem = (e) => {
         e.preventDefault();
         let items = [...this.state.groceries];
         items.push(this.state.item);
@@ -45,7 +45,7 @@ class App extends Component {
                     <input 
                         type="text" 
                         name="item" 
-                        onChange={changeItem} 
+                        onChange={this.changeItem} 
                     />
                     <input type="submit" />
                 </form>
@@ -55,7 +55,7 @@ class App extends Component {
 }
 ```
 
-This app allows us to add items to a groceries list. If we decide that we want to modularize this, we can take the ```<ul>``` and make it it's own component.
+This app allows us to add items to a groceries list. If we decide that we want to modularize this, we can take the ```<ul>``` and make it its own component.
 
 ```javascript
 
@@ -74,7 +74,7 @@ class GroceryList extends Component {
 }
 ```
 
-We could also take out the form an make it it's own component as well.
+We could also take out the form and make it its own component as well.
 
 ```javascript
 class GroceryForm extends Component {
@@ -100,7 +100,7 @@ class GroceryForm extends Component {
                 <input 
                     type="text" 
                     name="item" 
-                    onChange={changeItem} 
+                    onChange={this.changeItem} 
                 />
                 <input type="submit" />
             </form>
