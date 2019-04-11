@@ -19,7 +19,7 @@ class App extends Component {
 
     newProduct = (e) => {
         e.preventDefault();
-        alert(`{name: ${this.state.name}, price: ${this.state.price}}`);
+        alert(`{name: ${this.state.product.name}, price: ${this.state.product.price}}`);
     }
 
     changeName = (e) => {
