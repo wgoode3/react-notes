@@ -134,7 +134,7 @@ class App extends Component {
 
     render() {
         return (
-            <div class="container">
+            <div className="container">
                 <GroceryList arr={this.state.groceries} />
                 <GroceryForm />
             </div>
@@ -151,7 +151,7 @@ We can rewrite the ```render()``` in our ```App``` to add a new ```prop```.
 ```javascript
 render() {
     return (
-        <div class="container">
+        <div className="container">
             <GroceryList arr={this.state.groceries} />
             <GroceryForm onAddItem={this.addItemToList} />
         </div>
