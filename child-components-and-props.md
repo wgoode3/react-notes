@@ -3,7 +3,7 @@
 
 ## Child Components and Props
 
-When we're working with our ```App.js``` we may find ourselves at times writing repetative code. For instance imagine we have a list of products we want to show to our users.
+When we're working with our ```App.js``` we may find ourselves at times writing repetative code. For instance imagine we have a list of products we want to show to our users. [View on JSBin](https://jsbin.com/loseqosoqe/edit?js,output)
 
 ```javascript
 class App extends Component {
@@ -37,7 +37,7 @@ class App extends Component {
 
 This involves writing a lot of the same code over and over again. If we want to add in another product to our store, we'd have to make yet another div and put all of the information in again. One of the most powerful advantages that React (and other component based architectures) give us, is that we can essentially make blocks of code that act like our own html elements to do this for us. We can make them take in the right information and display it in the right places.
 
-Using child components, we can rewrite the above example like so...
+Using child components, we can rewrite the above example like so... [View on JSBin](https://jsbin.com/lavepoviho/1/edit?js,output)
 
 ```javascript
 class Product extends Component {
@@ -69,7 +69,7 @@ class App extends Component {
 
 Notice how much shorter this is to write. We can add a child component in as if it is it's own html element ```<Product />```, pretty cool huh? Also notice how we've had to add in a new attribute (think like adding an src and alt tag to an image ```<img src="myimg.jpg" alt="my image" />```) and we have called it "product" and set it equal to a javascript object containing name and price information. This is how we get name and price into each ```<Product />``` child component. These are called ```props```, information that we pass down from the parent into child components. We access them inside the child component by going through ```this.props```.
 
-If we're feeling adventurous, we can consider storing all of the product information inside of the ```state``` of our App component. We can then use ```.map()``` to loop through the array of product information and return a new array of ```<Product />``` child components. We can pass the product ```prop``` and the index as ```key``` (React uses key internally) to each child component.
+If we're feeling adventurous, we can consider storing all of the product information inside of the ```state``` of our App component. We can then use ```.map()``` to loop through the array of product information and return a new array of ```<Product />``` child components. We can pass the product ```prop``` and the index as ```key``` (React uses key internally) to each child component. [View on JSBin](https://jsbin.com/goqaluligi/edit?js,output)
 
 ```javascript
 // the Product class is unchanged from the previous example
@@ -90,11 +90,13 @@ class App extends Component {
         return (
             <div className="container">
                 <h1 className="jumbo">React Store!</h1>
+                <div>
                 {
                     this.state.products.map( (aProduct, index) =>
                         <Product key={index} product={aProduct} />
                     );
                 }
+                </div>
             </div>
         );
     }
