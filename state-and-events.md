@@ -5,7 +5,7 @@
 
 In react, ```state``` is where we store key information about our app so that we can display it to our users in the ```render()``` method and make appropriate changes to it as the user interacts with our app.
 
-We can create a state attribute inside of the [contructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) of our class. If we have a message to display to our users, we could put something like this into our ```App.js```.
+We can create a state attribute inside of the [contructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) of our class. If we have a message to display to our users, we could put something like this into our ```App.js```. [View on JSBin](https://jsbin.com/fedovuyaqa/edit?js,output)
 
 ```javascript
 class App extends Component {
@@ -36,7 +36,7 @@ State on it's own isn't too impressive to us, we could just have easily added th
 
 For this example, we are going to have a button that let's a user "leave" our app. We haven't implemented any sort of user authentication, this is just a simple example to show how we can change state.
 
-We will start with the above example and add in a new method called ```logout()```, and also add a corresponding button into our ```render()``` method.
+We will start with the above example and add in a new method called ```logout()```, and also add a corresponding button into our ```render()``` method. [View on JSBin](https://jsbin.com/ceqatiloqi/edit?js,output)
 
 ```javascript
 class App extends Component {
