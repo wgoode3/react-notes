@@ -44,13 +44,13 @@ class App extends Component {
 }
 ```
 
-This can be cumbersome to write and in many cases we might want to be able to add to or remove from the list easily. Unlike previous frameworks we may be used to, we shouldn't write a ```for``` loop directly, it is preferred to use [.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+This can be cumbersome to write and in many cases we might want to be able to add to or remove from the list easily. Unlike previous frameworks we may be used to, we shouldn't write a ```for``` loop directly, it is preferred to use [.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). [View on JSBin](https://jsbin.com/jeqoyagizo/edit?js,output)
 
 
 ```javascript
 class App extends Component {
-    const mammals = ["Lions", "Whales", "Manatees", "Bears", "Badgers", "Sloths", "Pandas"];
     render(){
+        const mammals = ["Lions", "Whales", "Manatees", "Bears", "Badgers", "Pandas", "Sloths"];
         return (
             <ul>
                 {
