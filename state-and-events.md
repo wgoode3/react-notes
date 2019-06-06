@@ -1,5 +1,5 @@
 [Home](https://github.com/wgoode3/react-notes/blob/master/README.md)
-[Prev](https://github.com/wgoode3/react-notes/blob/master/create-react-app.md)
+[Prev](https://github.com/wgoode3/react-notes/blob/master/howToJSX.md)
 
 ## State
 
