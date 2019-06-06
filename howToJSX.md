@@ -127,7 +127,7 @@ class App extends Component {
         return (
             <form action="/process" method="post">
                 <div class="form-group">
-                    <label for="email">Email: </label>
+                    <label htmlFor="email">Email: </label>
                     <input type="text" id="email" name="username" class="form-control" />
                 <div>
             </form>
