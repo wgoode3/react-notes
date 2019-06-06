@@ -25,6 +25,76 @@ We are able to use any HTML tags that we are already familiar with, try out some
 * input
 * img
 
+### Loops
+
+Consider an example where we have a list of large mammals...
+
+```javascript
+class App extends Component {
+    render(){
+        return (
+            <ul>
+                <li>Lions</li>
+                <li>Whales</li>
+                <!-- Many mammals later -->
+                <li>Sloths</li>
+            </ul>
+        )
+    }
+}
+```
+
+This can be cumbersome to write and in many cases we might want to be able to add to or remove from the list easily. Unlike previous frameworks we may be used to, we shouldn't write a ```for``` loop directly, it is preferred to use [.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+
+
+```javascript
+class App extends Component {
+    const mammals = ["Lions", "Whales", "Manatees", "Bears", "Badgers", "Sloths", "Pandas"];
+    render(){
+        return (
+            <ul>
+                {
+                    mammals.map( (m,i) =>
+                        <li key={i}>{m}</li>
+                    )
+                }
+            </ul>
+        )
+    }
+}
+```
+
+**Note** React wants us to provide a ```key``` to each child JSX element we create using ```.map()``` and for now the loop index ```i``` will be an appropriate value to give it.
+
+### Conditionals
+
+The easiest way to use conditionals is to use a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator). 
+
+```javascript
+class App extends Component {
+    let myBoolean = true;
+    render(){
+        return (
+            <>
+                {
+                    myBoolean ? <button>Yes</button> : <button>No</button>
+                }
+                {
+                    myBoolean === false ? <button>Yes</button> : <button>No</button>
+                }
+            </>
+        )
+    }
+}
+```
+
+The above buttons should display...
+
+```
+<button>Yes</button>
+<button>No</button>
+```
+
 ### Rules to keep in mind
 
 We aren't free to put in just anything we want to however.
