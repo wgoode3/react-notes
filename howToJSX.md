@@ -36,7 +36,7 @@ class App extends Component {
             <ul>
                 <li>Lions</li>
                 <li>Whales</li>
-                <!-- Many mammals later -->
+                 {/* Many mammals later */}
                 <li>Sloths</li>
             </ul>
         )
