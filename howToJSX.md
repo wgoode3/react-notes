@@ -1,4 +1,5 @@
 [Home](https://github.com/wgoode3/react-notes/blob/master/README.md)
+[Prev](https://github.com/wgoode3/react-notes/blob/master/create-react-app.md)
 
 ## Composing Pages Using JSX
 
@@ -136,3 +137,5 @@ class App extends Component {
 ```
 
 For more on these differences, please read the excellent [official documentation](https://reactjs.org/docs/dom-elements.html).
+
+[Next](https://github.com/wgoode3/react-notes/blob/master/state-and-events.md)
