@@ -163,9 +163,9 @@ var lightCount = 1;
 console.log("there are", lightCount, "lights");
 ```
 
-It will work just fine in the second case albeit with some grammatical inaccuracy printing out `there are 1 lights`.
+It will aslo work for the second case albeit with some grammatical inaccuracy printing out `there are 1 lights`.
 
-To fix this we need our code to decide to branch off one way or the other, we need a conditional.
+If we want to fix this we need our code to be able to branch off one way or the other, we need a conditional.
 
 ```javascript
 if (lightCount === 1) {
