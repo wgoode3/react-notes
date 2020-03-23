@@ -41,35 +41,55 @@ ES6 introduces two new ways to declare variables. `const` is essentially a const
 
 <hr>
 
-# Operators?
+# Hello Operators?
 
-<hr>
+### Math Operators
 
-# Conditionals
+The following operations can be performed on numbers in Javascript.
 
-### if / else if / else
+| operator | description                                                               |
+|----------|---------------------------------------------------------------------------|
+| +        | add the values on the left and right                                      |
+| -        | subtract the value on the right from the value on the left                |
+| *        | multiply the values on the left and right                                 |
+| /        | divide the value on the left by the value on the right                    |
+| %        | find the remainder of value on the left divided by the value on the right |
+| ++       | increment the value by 1 ( adds one )                                     |
+| --       | decrement the value by 1 ( subtracts one )                                |
 
+### Assignment Operators
 
-### Hello Operators
+| operator | description                                                                                                 |
+|----------|-------------------------------------------------------------------------------------------------------------|
+| =        | set the variable on the left to the value on the right                                                      |
+| +=       | increase the variable on the left by the value on the right                                                 |
+| -=       | decrease the variable on the left by the value on the right                                                 |
+| \*=      | mulitply the variable on the left by the value on the right and set it equal to the result                  |
+| /=       | divide the variable on the left by the value on the right and set it equal to the result                    |
+| %=       | find the remainder of variable on the left divided by the value on the right and set it equal to the result |
 
-The following `operators` will compare two values (one before and one after) and return a boolean (true of false).
+### Comparison Operators
 
-| comparison operator | what it does                                                          | example |
-|---------------------|-----------------------------------------------------------------------|---------|
-| ==                  | checks that the values are the same                                   | a == 1  |
-| ===                 | checks that the values are the same                                   | b === 3 |
-| !=                  | checks that the values are **not** the same                           | b != a  |
-| !==                 | checks that the values are **not** the same                           | a !== 3 |
-| >                   | checks that the first value is larger than the second                 | a > 1   |
-| <                   | checks that the first value is smaller than the second                | a < 3   |
-| >=                  | checks that the first value is larger than or the same as the second  | a >= b  |
-| <=                  | checks that the first value is smaller than or the same as the second | b <= 3  |
+The following `operators` will compare two values of any type and return a boolean (true of false).
+
+| operator | description                                                           |
+|----------|-----------------------------------------------------------------------|
+| ==       | checks that the values are the same                                   |
+| ===      | checks that the values are the same                                   |
+| !=       | checks that the values are **not** the same                           |
+| !==      | checks that the values are **not** the same                           |
+| >        | checks that the first value is larger than the second                 |
+| <        | checks that the first value is smaller than the second                |
+| >=       | checks that the first value is larger than or the same as the second  |
+| <=       | checks that the first value is smaller than or the same as the second |
+| &&       | is true if **both** the before and after values are true              |
+| \|\|     | is true if **either** the before or after values are true             |
 
 Note there is no such thing as `!>` (not greater than) or `!<` (not less than)... instead use `<=` (less than or equal to) for the former or `>=` (greater than or equal to) for the latter.
 
 ### Not all Equals are the same
 
-We may be asking what is the difference between `==` and `===`? They see{{ DIAGRAM: ANATOMY OF VARIABLE ASSIGNMENT }}m to work the same for most things...
+We may be asking what is the difference between `==` and `===`? They seem to work the same for most things...
 
 ```javascript
 1 ==  2     // false
@@ -88,6 +108,52 @@ However the `==` will sometimes try a little harder to make things equal.
 ```
 
 In the first example the string `"3"` could be converted to the number `3` so the double equals `==` will return true, and in the second example the number `1` is considered truthy (a concept we'll touch on soon) so it is also considered true. However the triple equals `===` will mandate that the things being compared must be the same type to be equal. This strictness when it comes to type means that `===` can run faster then `==` and can also help us avoid tricky to identify bugs in our code. 
+
+<hr>
+
+# Conditionals
+
+### if / else if / else
+
+
+
+
+### "Truthiness"
+
+In Javascript, conditionals can infer if a value is true of false even if the value isn't actually `true` or `false`. This means we can use our if statements without having to mess around with comparison operators like `===` or `>`.  Some examples that are consided true or false are displayed below...
+
+| Type          | example(s) when false | example(s) when true   |
+|---------------|-----------------------|------------------------|
+| `'booleans'`  | `if ( false )`        | `if ( true )`          | 
+| `'strings'`   | `if ("")`             | `if ( "hello" )`       |
+| `'numbers'`   | `if (0) / if(NaN)`    | `if (-1) || if (5)`    |
+| `'objects'`   | `if (null)`           | `if ([]) / if ({})`    |
+| `'undefined'` | `if ({}.errors)`      |                        |
+| `'function'`  |                       | `if ( function(){} )`  |
+
+In fact almost everything is considered true except the following items:
+
+* `false`
+* `""`
+* `0`
+* `NaN`
+* `null`
+* `undefined`
+
+These rules also can apply to loops...
+
+**Caution:** Make sure you have `ctrl+c` handy if you test the two below pieces of code... they are infinite loops.
+
+```javascript
+
+while(1) {
+  process.stdout.write("hello world ");
+}
+
+for(let i=0; ; i++) {
+  console.log(i);
+}
+```
 
 ### && and/or ||
 
@@ -132,43 +198,6 @@ To see a breakdown of how this logic will play out when each side is true and or
 | **false** | &check; | &times; |
 
 **Note:** don't mistake the `||` operator for the `|` operator or the `&&` operator for the `&` operator. The single character versions are used with bit arithmetic (1's and 0s') and not logic operations (true's and false's). 
-
-### "Truthiness"
-
-In Javascript, conditionals can infer if a value is true of false even if the value isn't actually `true` or `false`. This means we can use our if statements without having to mess around with comparison operators like `===` or `>`.  Some examples that are consided true or false are displayed below...
-
-| Type          | example(s) when false | example(s) when true   |
-|---------------|-----------------------|------------------------|
-| `'booleans'`  | `if ( false )`        | `if ( true )`          | 
-| `'strings'`   | `if ("")`             | `if ( "hello" )`       |
-| `'numbers'`   | `if (0) / if(NaN)`    | `if (-1) || if (5)`    |
-| `'objects'`   | `if (null)`           | `if ([]) / if ({})`    |
-| `'undefined'` | `if ({}.errors)`      |                        |
-| `'function'`  |                       | `if ( function(){} )`  |
-
-In fact almost everything is considered true except the following items:
-
-* `false`
-* `""`
-* `0`
-* `NaN`
-* `null`
-* `undefined`
-
-These rules also can apply to loops...
-
-**Caution:** Make sure you have `ctrl+c` handy if you test the two below pieces of code... they are infinite loops.
-
-```javascript
-
-while(1) {
-  process.stdout.write("hello world ");
-}
-
-for(let i=0; ; i++) {
-  console.log(i);
-}
-```
 
 ### Ternary Operators
 
