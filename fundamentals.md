@@ -6,9 +6,7 @@ introduction
 <hr>
 
 # Variables
-when we need to be able to store information we need to use variables in js. Typically we will combine both the step of declaring a variable and the step setting a variable. 
-
-{{ DIAGRAM OF VARIABLE ASSIGNMENT }}
+When we need to be able to store information we need to use variables in js. Typically we will combine both the step of declaring a variable and the step setting a variable. 
 
 ```javascript
 var a = 3;
@@ -30,12 +28,16 @@ typeof(d); // 'string'
 typeof(e); // 'function'
 ```
 
+{{ DIAGRAM: ANATOMY OF VARIABLE ASSIGNMENT }}
+
 ### New in ES6
 
 ```javascript
 const pi = 3.141592;
 let temp = "hello";
 ```
+
+ES6 introduces two new ways to declare variables. `const` is essentially a constant, once we set it it does not support reassignment (use of the `=` operator). `let` is a variable that we intend to allow to change and therefore does support reassignment. Where `var` is considered "function scoped", `let` is instead "block scoped". We promise to get back to the idea of scope later on... but to see the difference in action, [the MDN has us covered](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block).
 
 # Conditionals
 
@@ -61,7 +63,7 @@ Note there is no such thing as `!>` (not greater than) or `!<` (not less than)..
 
 ### Not all Equals are the same
 
-We may be asking what is the difference between `==` and `===`? They seem to work the same for most things...
+We may be asking what is the difference between `==` and `===`? They see{{ DIAGRAM: ANATOMY OF VARIABLE ASSIGNMENT }}m to work the same for most things...
 
 ```javascript
 1 ==  2     // false
@@ -164,10 +166,10 @@ for(let i=0; ; i++) {
 
 ### Ternary Operators
 
-Let's say we want to write as simple program to simulate flipping a coin...
+Let's say we want to write a simple program to simulate flipping a coin...
 
 ```javascript
-if( Math.random() > 0.5) {
+if( Math.random() > 0.5 ) {
   console.log("heads");
 } else {
   console.log("tails");
@@ -185,7 +187,11 @@ This is equivalent to the above `if else` that we have written. In a ternary, th
 
 These ternaries can take your coding to the next level and take up a lot less space on a whiteboard. We'd recommend you play around with them a bit, but while yes you can chain ternaries together you may be better off with the humble `if / else if / else`.
 
+{{ DIAGRAM, ANATOMY OF A TERNARY }}
+
 ### switchcase
+
+Yet another way we can write a conditional is by using a switchcase. In the following example we check what day it is, the `new Date().getDay()` will return a different number for each day of the week. 
 
 ```javascript
 switch( new Date().getDay() ) {
@@ -195,16 +201,14 @@ switch( new Date().getDay() ) {
   case(1):
     console.log("It's Monday");
     break;
-  case(2):
-    console.log("It's Tuesday");
-    break;
   default:
     console.log("It's some other day");
 }
 ```
 
+With a switchcase, we provide a value to the `switch()` and check for each value one after the other in the `case()` statements. As only one case should ideally match, it's common to use a `break` to end the `switch()` code block and avoid checking unnecessary cases. The `default` case is there to execute if no other case will match. It's similar to the `else` we might have at the end of an `if / else if / else` conditional.
 
-### returning booleans
+{{ DIAGRAM, ANATOMY OF A SWITCHCASE }}
 
 <hr>
 
@@ -222,3 +226,8 @@ block scoped variables
 # Strings
 
 # Functions
+
+### variable scope
+
+### returning booleans
+
