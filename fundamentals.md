@@ -191,7 +191,7 @@ if( weather === "sunny" ) {
 }
 ```
 
-In this case it will first check if weather is sunny, then if the weather is cold, then if the weather is rainy, and if none of those are true it will run the else statement. If the weather is sunny, it won't bother checking any of the other conditions. In general it's a good idea to write the mist specific condition first followed by less and less specific conditions and allow the `else` to be what happens if nothing matches.
+In this case it will first check if weather is sunny, then if the weather is cold, then if the weather is rainy, and if none of those are true it will run the else statement. If the weather is sunny, it won't bother checking any of the other conditions. In general it's a good idea to write the most specific condition first followed by less and less specific conditions and allow the `else` to be what happens if nothing matches.
 
 Imagine we've written this code...
 
@@ -225,7 +225,7 @@ In Javascript, conditionals can infer if a value is true of false even if the va
 |---------------|-----------------------|------------------------|
 | `'booleans'`  | `if ( false )`        | `if ( true )`          | 
 | `'strings'`   | `if ("")`             | `if ( "hello" )`       |
-| `'numbers'`   | `if (0) / if(NaN)`    | `if (-1) || if (5)`    |
+| `'numbers'`   | `if (0) / if(NaN)`    | `if (-1) \|\| if (5)`  |
 | `'objects'`   | `if (null)`           | `if ([]) / if ({})`    |
 | `'undefined'` | `if ({}.errors)`      |                        |
 | `'function'`  |                       | `if ( function(){} )`  |
