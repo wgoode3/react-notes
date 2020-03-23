@@ -82,12 +82,10 @@ The following `operators` will compare two values of any type and return a boole
 | <        | checks that the first value is smaller than the second                |
 | >=       | checks that the first value is larger than or the same as the second  |
 | <=       | checks that the first value is smaller than or the same as the second |
-| &&       | is true if **both** the before and after values are true              |
-| \|\|     | is true if **either** the before or after values are true             |
 
 Note there is no such thing as `!>` (not greater than) or `!<` (not less than)... instead use `<=` (less than or equal to) for the former or `>=` (greater than or equal to) for the latter.
 
-### Not all Equals are the same
+#### Not all Equals are the same
 
 We may be asking what is the difference between `==` and `===`? They seem to work the same for most things...
 
@@ -107,7 +105,43 @@ However the `==` will sometimes try a little harder to make things equal.
 1 === true // false
 ```
 
-In the first example the string `"3"` could be converted to the number `3` so the double equals `==` will return true, and in the second example the number `1` is considered truthy (a concept we'll touch on soon) so it is also considered true. However the triple equals `===` will mandate that the things being compared must be the same type to be equal. This strictness when it comes to type means that `===` can run faster then `==` and can also help us avoid tricky to identify bugs in our code. 
+In the first example the string `"3"` could be converted to the number `3` so the double equals `==` will return true, and in the second example the number `1` is considered *"truthy"* (a concept we'll touch on soon) so it is also considered true. However the triple equals `===` will mandate that the things being compared must be the same type to be equal. This strictness when it comes to type means that `===` can run faster then `==` and can also help us avoid tricky to identify bugs in our code. 
+
+### Logical Operators
+
+The following `operators` are used with booleans.
+
+| operator | description                                                               |
+|----------|---------------------------------------------------------------------------|
+| !        | is the oposite of whatever boolean follows (**not** true / **not** false) |
+| &&       | is true if **both** the before and after values are true                  |
+| \|\|     | is true if **either** the before or after values are true                 |
+
+We'll see more about the last two operators in in the Conditionals module, but we're introducing them here for completeness.
+
+**Note:** don't mistake the `||` operator for the `|` operator or the `&&` operator for the `&` operator. The single character versions are used with bit arithmetic (1's and 0s') and not logic operations (true's and false's). We're going to leave out bitwise operators for now if you are curious about them check out [the MDN once again](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators).
+
+### New in ES6
+
+One somewhat uncommon operation we may need to perform is finding the exponential of some value. ES6 introduces the `**` operator to make this a lot easier.
+
+```javascript
+console.log(2**8); // 256
+```
+
+In the past we'd have to use the `Math` library to find an exponential.
+
+```javascript
+console.log( Math.pow(2, 8) ); // 256
+```
+
+We are also able to use `**=`, the assignment version of the exponential operator.
+
+```javascript
+let b = 2;
+b **= 16;
+console.log(b); // 65536
+```
 
 <hr>
 
@@ -115,8 +149,73 @@ In the first example the string `"3"` could be converted to the number `3` so th
 
 ### if / else if / else
 
+Sometimes our code needs to react differently based on some condition. 
 
+```javascript
+var lightCount = 4;
+console.log("there are", lightCount, "lights");
+```
 
+The console log will work just fine in the first case and print out `there are 4 lights`.
+
+```javascript
+var lightCount = 1;
+console.log("there are", lightCount, "lights");
+```
+
+It will work just fine in the second case albeit with some grammatical inaccuracy printing out `there are 1 lights`.
+
+To fix this we need our code to decide to branch off one way or the other, we need a conditional.
+
+```javascript
+if (lightCount === 1) {
+  console.log("there is", lightCount, "light");
+} else {
+  console.log("there are", lightCount, "lights");
+}
+```
+
+Sometimes we need more options than just the two we get with `if` and `else`.
+
+We can chain as any if / else statements together as we need and they will run in succession.
+
+```javascript
+if( weather === "sunny" ) {
+  console.log("bring sunglasses");
+} else if( weather === "cold" ) {
+  console.log("bring a coat");
+} else if( weather === "rainy" ) {
+  console.log("bring an umbrella");
+} else {
+  console.log("you don't need to bring anything");
+}
+```
+
+In this case it will first check if weather is sunny, then if the weather is cold, then if the weather is rainy, and if none of those are true it will run the else statement. If the weather is sunny, it won't bother checking any of the other conditions. In general it's a good idea to write the mist specific condition first followed by less and less specific conditions and allow the `else` to be what happens if nothing matches.
+
+Imagine we've written this code...
+
+```javascript
+if( number % 2 === 0 ) {
+  console.log("the number is divisible by 2");
+} else if( number % 3 === 0 ) {
+  console.log("the number is divisible by 3");
+} else if( number % 6 === 0 ) {
+  console.log("the number is divisible by 6");
+}
+```
+
+The message `"the number is divisible by 6"` will never run because the first check will always be true before we get to it. We should instead write this code like...
+
+```javascript
+if( number % 6 === 0 ) {
+  console.log("the number is divisible by 6");
+} else if( number % 3 === 0 ) {
+  console.log("the number is divisible by 3");
+} else if( number % 2 === 0 ) {
+  console.log("the number is divisible by 2");
+}
+```
 
 ### "Truthiness"
 
@@ -196,8 +295,6 @@ To see a breakdown of how this logic will play out when each side is true and or
 |:---------:|:-------:|:-------:|
 | **true**  | &check; | &check; |
 | **false** | &check; | &times; |
-
-**Note:** don't mistake the `||` operator for the `|` operator or the `&&` operator for the `&` operator. The single character versions are used with bit arithmetic (1's and 0s') and not logic operations (true's and false's). 
 
 ### Ternary Operators
 
