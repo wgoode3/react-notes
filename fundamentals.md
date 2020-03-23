@@ -39,6 +39,12 @@ let temp = "hello";
 
 ES6 introduces two new ways to declare variables. `const` is essentially a constant, once we set it it does not support reassignment (use of the `=` operator). `let` is a variable that we intend to allow to change and therefore does support reassignment. Where `var` is considered "function scoped", `let` is instead "block scoped". We promise to get back to the idea of scope later on... but to see the difference in action, [the MDN has us covered](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block).
 
+<hr>
+
+# Operators?
+
+<hr>
+
 # Conditionals
 
 ### if / else if / else
