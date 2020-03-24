@@ -413,11 +413,43 @@ while(i < 11) {
 Note how can still make an `i` variable and set it to 1. We can have the while loop run as long as `i < 11`. The `console.log` will still get run multiple times. And lastly we need to make sure we still have that `i++` or some other code that will make `i` increase to at least 11, otherwise the while loop will run forever (infinite loop).
 
 ### New in ES6
-block scoped variables
+
+We mentioned earlier how `let` is block scoped unlike `var`, this has implications for our for loops. Imagine we have some import variable called `important`.
+
+```javascript
+var important = 1000;
+
+for(var important=0; important<10; important++) {
+}
+
+console.log(important);
+```
+
+When we `console.log(important)` it will actually give us `11` and not the value we initially set it to of `1000`. This is because `var` will override another `var` inside of this scope. If instead we wrote this with `let`...
+
+```javascript
+let important = 1000;
+
+for(let important=0; important<10; important++) {
+}
+
+console.log(important);
+```
+
+the `console.log(important)` will still be `1000`. Essentially the `important` that we make inside of the `for` loop is a different `important` than the one outside the `for` loop. 
 
 <hr>
 
 # Objects and Arrays
+
+Some of you may have noticed earier when we talked about declaring variables and checking their types that one seemed a bit off. 
+
+```javascript
+var d = [];
+typeof(d);  // 'object'
+```
+
+
 
 <hr>
 
