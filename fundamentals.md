@@ -382,6 +382,8 @@ This time starting at a high value, running as long as the value is greater than
 
 It's also common to set the increment to change by more than one using the `+=` and `-=` operators.
 
+{{ DIAGRAM ANATOMY OF FOR LOOP }}
+
 ### while
 
 A while loop is a bit like an `if` that keeps running its contents as long as the condition is true. They are especially good if we don't know how many times something should run.
@@ -442,7 +444,7 @@ the `console.log(important)` will still be `1000`. Essentially the `important` t
 
 # Objects and Arrays
 
-Some of you may have noticed earier when we talked about declaring variables and checking their types that one seemed a bit off. 
+Some of us may have noticed earier when we talked about declaring variables and checking their types that one seemed a bit off. 
 
 ```javascript
 var d = [];
