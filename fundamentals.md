@@ -346,16 +346,84 @@ With a switchcase, we provide a value to the `switch()` and check for each value
 
 # Loops
 
+When we think about the major advantages that computing can provide for us, handling repetative tasks is probably one of the first things that come to mind. As programmers we should see code like this...
+
+```javascript
+console.log(1);
+console.log(2);
+console.log(3);
+// ...
+console.log(10);
+```
+
+and think there must be a better way.
+
 ### for
 
+For loops are one of the better ways. The code we saw above can be rewritten like the below example.
+
+```javascript
+for(var i=1; i<11; i++) {
+  console.log(i);
+}
+```
+
+To write a for loop we use the `for` keyword, and we need to provide 3 clauses. The first clause `var i=1` is declaring a variable and setting it equal to 1. This runs once, at the very beginning of the loop. The second clause `i<11` should be some sort of comparison and as long as the value is true (or is considered truthy) the for loop will keep running. The final clause `i++` will run with every iteration of the loop, in this case each time the loop is run the variable `i` will increase by 1 until the second clause (`i<11`) is no longer true.
+
+For loops like this are convenient as they provide an easily controlled way to generate the numbers from some starting value to some ending value. We can make the numbers count down instead fairly easily as well...
+
+```javascript
+for(vari=10; i>0; i--){
+  console.log(i);
+}
+```
+
+This time starting at a high value, running as long as the value is greater than 0, and decreasing by one each time. 
+
+It's also common to set the increment to change by more than one using the `+=` and `-=` operators.
+
 ### while
+
+A while loop is a bit like an `if` that keeps running its contents as long as the condition is true. They are especially good if we don't know how many times something should run.
+
+```javascript
+var done = false;
+
+while( !done ) {
+  var input = prompt("Say uncle!");
+  if( input === "uncle" ) {
+    done = true;
+  }
+}
+```
+
+This program will keep prompting with the text of "Say uncle!", until the user types in "uncle". It would be a bit unnatural to write this using a for loop, but with a while loop we can manage. 
+
+We could make a while loop that counts much like the for loop we've written above. In fact we can hopefully see some similarities in how the logic works in this while loop.
+
+```javascript
+var i = 1;
+
+while(i < 11) {
+  console.log(i);
+  i++;
+}
+```
+
+Note how can still make an `i` variable and set it to 1. We can have the while loop run as long as `i < 11`. The `console.log` will still get run multiple times. And lastly we need to make sure we still have that `i++` or some other code that will make `i` increase to at least 11, otherwise the while loop will run forever (infinite loop).
 
 ### New in ES6
 block scoped variables
 
+<hr>
+
 # Objects and Arrays
 
+<hr>
+
 # Strings
+
+<hr>
 
 # Functions
 
